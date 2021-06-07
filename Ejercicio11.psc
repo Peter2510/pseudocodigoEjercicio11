@@ -17,13 +17,7 @@ Algoritmo Ejercicio11
 				SiNo
 					Si num > 12 y num < 25 Entonces
 						contadorSDoc = contadorSDoc + 1
-						Si NPar = 0 Entonces
-							sumaPares = num + sumaPares
-							contadorPares = contadorPares + 1
-							promedioPares = (sumaPares)/contadorPares
-						SiNo
-							contadorImpares = contadorImpares + 1
-						Fin Si
+						
 					SiNo
 						nPar = num MOD 2
 						ingresados = ingresados + 1
@@ -31,8 +25,11 @@ Algoritmo Ejercicio11
 							sumaPares = num + sumaPares
 							contadorPares = contadorPares + 1
 							promedioPares = (sumaPares)/contadorPares
+							Escribir " De los números ingresados,", contadorImpares ," numeros son impares, el promedio de los pares es de " ,promedioPares, " y el número mayor es ", Nmayor
 						SiNo
 							contadorImpares = contadorImpares + 1
+							
+							Escribir " De los números ingresados,", contadorImpares ," numeros son impares, el promedio de los pares es de " ,promedioPares, " y el número mayor es ", Nmayor
 						Fin Si
 					Fin Si
 				Fin Si
