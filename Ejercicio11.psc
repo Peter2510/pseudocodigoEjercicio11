@@ -14,6 +14,12 @@ Algoritmo Ejercicio11
 				ingresados = ingresados + 1
 				Nmayor = num
 				
+				Si num >= 13 & num <= 24  Entonces
+					contadorSegundaDocena = contadorSegundaDocena + 1
+					Escribir "Docnea",contadorSegundaDocena
+				SiNo
+				Fin Si
+				
 				NPar = num MOD 2
 				
 				Si NPar = 0 Entonces
@@ -30,6 +36,12 @@ Algoritmo Ejercicio11
 					Escribir num
 					ingresados = ingresados + 1
 					
+					Si num >= 13 & num <= 24  Entonces
+						contadorSegundaDocena = contadorSegundaDocena + 1
+						Escribir "Docnea",contadorSegundaDocena
+					SiNo
+					Fin Si
+					
 					NPar = num MOD 2
 					
 					Si NPar = 0 Entonces
@@ -43,6 +55,20 @@ Algoritmo Ejercicio11
 					Escribir "Ingresados" ingresados
 					Escribir "Mayor" Nmayor
 				SiNo
+					ingresados = ingresados + 1
+					
+					NPar = num MOD 2
+					
+					Si NPar = 0 Entonces
+						contadorPar= contadorPar +1
+						Escribir "Par", contadorPar
+					SiNo
+						contadorImPar = contadorImPar + 1
+						Escribir "imPar",contadorImPar
+					Fin Si
+					
+					Escribir "Ingresados" ingresados
+					Escribir "Mayor" Nmayor
 					
 				Fin Si
 			Fin Si
