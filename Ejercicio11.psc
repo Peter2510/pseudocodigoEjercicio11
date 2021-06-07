@@ -16,7 +16,7 @@ Algoritmo Ejercicio11
 				
 				Si num >= 13 & num <= 24  Entonces
 					contadorSegundaDocena = contadorSegundaDocena + 1
-					Escribir "Docnea",contadorSegundaDocena
+					
 				SiNo
 				Fin Si
 				
@@ -24,21 +24,23 @@ Algoritmo Ejercicio11
 				
 				Si NPar = 0 Entonces
 					contadorPar= contadorPar +1
-					Escribir "Par", contadorPar
+					
+					total = total + num
+					promedioPares = (total)/contadorPar
 				SiNo
 					contadorImPar = contadorImPar + 1
-					Escribir "imPar",contadorImPar
+					
 				Fin Si
 				
 			SiNo
 				Si num > Nmayor Entonces
 					Nmayor = num
-					Escribir num
+					
 					ingresados = ingresados + 1
 					
 					Si num >= 13 & num <= 24  Entonces
 						contadorSegundaDocena = contadorSegundaDocena + 1
-						Escribir "Docnea",contadorSegundaDocena
+						
 					SiNo
 					Fin Si
 					
@@ -46,14 +48,16 @@ Algoritmo Ejercicio11
 					
 					Si NPar = 0 Entonces
 						contadorPar= contadorPar +1
-						Escribir "Par", contadorPar
+						
+						total = total + num
+						promedioPares = (total)/contadorPar
+					
 					SiNo
 						contadorImPar = contadorImPar + 1
-						Escribir "imPar",contadorImPar
+						
 					Fin Si
 					
-					Escribir "Ingresados" ingresados
-					Escribir "Mayor" Nmayor
+					
 				SiNo
 					ingresados = ingresados + 1
 					
@@ -61,14 +65,15 @@ Algoritmo Ejercicio11
 					
 					Si NPar = 0 Entonces
 						contadorPar= contadorPar +1
-						Escribir "Par", contadorPar
+						
+						total = total + num
+						promedioPares = (total)/contadorPar
 					SiNo
 						contadorImPar = contadorImPar + 1
-						Escribir "imPar",contadorImPar
+						
 					Fin Si
 					
-					Escribir "Ingresados" ingresados
-					Escribir "Mayor" Nmayor
+					
 					
 				Fin Si
 			Fin Si
@@ -77,8 +82,10 @@ Algoritmo Ejercicio11
 			Escribir "Ingrese numero Valido"
 		Fin Si
 		
+		
+		
 	Fin Para
 	
-	
+	Escribir " De los números ingresados, " ,contadorImPar, " numeros son impares, el promedio de los pares es de: " ,promedioPares , ", el número mayor es: " ,Nmayor, " y los numeros comprendidos entre 1 y 24 son: ",  contadorSegundaDocena
 	
 FinAlgoritmo
