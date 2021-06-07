@@ -12,7 +12,30 @@ Algoritmo Ejercicio11
 				ingresados = ingresados + 1
 				Nmayor = num
 			SiNo
-				
+				Si num > Nmayor Entonces
+					num= mNayor
+				SiNo
+					Si num > 12 y num < 25 Entonces
+						contadorSDoc = contadorSDoc + 1
+						Si NPar = 0 Entonces
+							sumaPares = num + sumaPares
+							contadorPares = contadorPares + 1
+							promedioPares = (sumaPares)/contadorPares
+						SiNo
+							contadorImpares = contadorImpares + 1
+						Fin Si
+					SiNo
+						nPar = num MOD 2
+						ingresados = ingresados + 1
+						Si NPar = 0 Entonces
+							sumaPares = num + sumaPares
+							contadorPares = contadorPares + 1
+							promedioPares = (sumaPares)/contadorPares
+						SiNo
+							contadorImpares = contadorImpares + 1
+						Fin Si
+					Fin Si
+				Fin Si
 			Fin Si
 		SiNo
 			Escribir "Ingrese numero Valido"
