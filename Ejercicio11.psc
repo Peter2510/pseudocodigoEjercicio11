@@ -3,42 +3,55 @@ Algoritmo Ejercicio11
 	ingresados =0
 	Nmayor = 0
 	
-	Mientras ingresados >=0 & ingresados < 11 Hacer
+	Para i <-1 Hasta 10 Con Paso 1 paso Hacer
+	
 		Escribir "Ingrese un numero entre 0 y 36"
 		leer num
 		
 		Si num >= 0 & num < 36 Entonces
-			Si ingresados = 1 Entonces
+			
+			Si ingresados = 0 Entonces
 				ingresados = ingresados + 1
 				Nmayor = num
+				
+				NPar = num MOD 2
+				
+				Si NPar = 0 Entonces
+					contadorPar= contadorPar +1
+					Escribir "Par", contadorPar
+				SiNo
+					contadorImPar = contadorImPar + 1
+					Escribir "imPar",contadorImPar
+				Fin Si
+				
 			SiNo
 				Si num > Nmayor Entonces
-					num= mNayor
-				SiNo
-					Si num > 12 y num < 25 Entonces
-						contadorSDoc = contadorSDoc + 1
-						
+					Nmayor = num
+					Escribir num
+					ingresados = ingresados + 1
+					
+					NPar = num MOD 2
+					
+					Si NPar = 0 Entonces
+						contadorPar= contadorPar +1
+						Escribir "Par", contadorPar
 					SiNo
-						nPar = num MOD 2
-						ingresados = ingresados + 1
-						Si NPar = 0 Entonces
-							sumaPares = num + sumaPares
-							contadorPares = contadorPares + 1
-							promedioPares = (sumaPares)/contadorPares
-							Escribir " De los números ingresados,", contadorImpares ," numeros son impares, el promedio de los pares es de " ,promedioPares, " y el número mayor es ", Nmayor
-						SiNo
-							contadorImpares = contadorImpares + 1
-							
-							Escribir " De los números ingresados,", contadorImpares ," numeros son impares, el promedio de los pares es de " ,promedioPares, " y el número mayor es ", Nmayor
-						Fin Si
+						contadorImPar = contadorImPar + 1
+						Escribir "imPar",contadorImPar
 					Fin Si
+					
+					Escribir "Ingresados" ingresados
+					Escribir "Mayor" Nmayor
+				SiNo
+					
 				Fin Si
 			Fin Si
+			
 		SiNo
 			Escribir "Ingrese numero Valido"
 		Fin Si
 		
-	Fin Mientras
+	Fin Para
 	
 	
 	
